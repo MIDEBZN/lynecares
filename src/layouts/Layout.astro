@@ -8,6 +8,99 @@ interface Props {
 }
 
 const { title, description } = Astro.props;
+const siteUrl = 'https://lynecares.site';
+const canonicalURL = new URL(Astro.url.pathname, siteUrl);
+
+const schema = {
+	"@context": "https://schema.org",
+	"@type": ["AutoRepair", "Plumber"],
+	"name": "LYNECARES",
+	"url": siteUrl,
+	"logo": `${siteUrl}/favicon.svg`,
+	"telephone": "+3240000000",
+	"email": "contact@lynecaressrl.site",
+	"address": {
+		"@type": "PostalAddress",
+		"streetAddress": "188 Rue de Bois-de-Breux",
+		"addressLocality": "Liège",
+		"postalCode": "4020",
+		"addressCountry": "BE"
+	},
+	"openingHoursSpecification": [
+		{
+			"@type": "OpeningHoursSpecification",
+			"dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+			"opens": "08:00",
+			"closes": "18:00"
+		},
+		{
+			"@type": "OpeningHoursSpecification",
+			"dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+			"opens": "00:00",
+			"closes": "23:59",
+			"description": "Urgences Dépannage 24/7"
+		}
+	],
+	"hasOfferCatalog": {
+		"@type": "OfferCatalog",
+		"name": "Services de Plomberie et Chauffage",
+		"itemListElement": [
+			{
+				"@type": "OfferCatalog",
+				"name": "Dépannage Plomberie",
+				"itemListElement": [
+					{
+						"@type": "Offer",
+						"itemOffered": {
+							"@type": "Service",
+							"name": "Recherche et réparation de fuites d'eau"
+						}
+					},
+					{
+						"@type": "Offer",
+						"itemOffered": {
+							"@type": "Service",
+							"name": "Débouchage de canalisations"
+						}
+					}
+				]
+			},
+			{
+				"@type": "OfferCatalog",
+				"name": "Chauffage",
+				"itemListElement": [
+					{
+						"@type": "Offer",
+						"itemOffered": {
+							"@type": "Service",
+							"name": "Entretien de chaudière"
+						}
+					},
+					{
+						"@type": "Offer",
+						"itemOffered": {
+							"@type": "Service",
+							"name": "Dépannage de chaudière"
+						}
+					}
+				]
+			},
+			{
+				"@type": "OfferCatalog",
+				"name": "Installations Sanitaires",
+				"itemListElement": [
+					{
+						"@type": "Offer",
+						"itemOffered": {
+							"@type": "Service",
+							"name": "Rénovation de salle de bain"
+						}
+					}
+				]
+			}
+		]
+	}
+};
 ---
 
 <!doctype html>
@@ -17,8 +110,19 @@ const { title, description } = Astro.props;
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>{title} | LYNECARES</title>
+		<title>{title}</title>
 		<meta name="description" content={description} />
+		<link rel="canonical" href={canonicalURL} />
+		
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content={canonicalURL} />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		
+		<!-- Schema.org -->
+		<script type="application/ld+json" set:html={JSON.stringify(schema)} />
+
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
