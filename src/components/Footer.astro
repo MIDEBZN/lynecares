@@ -1,0 +1,158 @@
+---
+const year = new Date().getFullYear();
+---
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div class="footer-col">
+      <a href="/" class="logo footer-logo">
+        <span class="logo-icon">💧</span>
+        LYNE<span class="logo-accent">CARES</span>
+      </a>
+      <p class="footer-desc">
+        Votre plombier de confiance à Liège. Intervention rapide, travail soigné et tarifs transparents pour tous vos besoins en plomberie et chauffage.
+      </p>
+    </div>
+
+    <div class="footer-col">
+      <h3 class="footer-heading">Liens Rapides</h3>
+      <ul class="footer-links">
+        <li><a href="/">Accueil</a></li>
+        <li><a href="/services">Services</a></li>
+        <li><a href="/locations">Zones d'intervention</a></li>
+        <li><a href="/about">À propos</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h3 class="footer-heading">Nos Services</h3>
+      <ul class="footer-links">
+        <li><a href="/services#depannage">Dépannage Urgent</a></li>
+        <li><a href="/services#installation">Installation Sanitaire</a></li>
+        <li><a href="/services#chauffage">Entretien Chauffage</a></li>
+        <li><a href="/services#fuites">Recherche de Fuites</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h3 class="footer-heading">Contact</h3>
+      <address class="footer-contact">
+        <p>📍 Rue de la Plomberie 123<br>4000 Liège, Belgique</p>
+        <p>📞 <a href="tel:+3240000000">+32 4 000 00 00</a></p>
+        <p>✉️ <a href="mailto:contact@lynecares.be">contact@lynecares.be</a></p>
+        <p>⏱️ 7j/7 - 24h/24 (Urgences)</p>
+      </address>
+    </div>
+  </div>
+  
+  <div class="footer-bottom">
+    <div class="container footer-bottom-inner">
+      <p>&copy; {year} LYNECARES. Tous droits réservés.</p>
+      <div class="footer-legal">
+        <a href="/mentions-legales">Mentions Légales</a>
+        <a href="/confidentialite">Politique de Confidentialité</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    background: var(--primary);
+    color: var(--bg-alt);
+    padding-top: 5rem;
+  }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  .logo {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .logo-accent {
+    color: var(--secondary);
+  }
+
+  .footer-desc {
+    color: #94a3b8;
+    font-size: 0.95rem;
+  }
+
+  .footer-heading {
+    color: white;
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .footer-links {
+    list-style: none;
+  }
+
+  .footer-links li {
+    margin-bottom: 0.8rem;
+  }
+
+  .footer-links a {
+    color: #94a3b8;
+    transition: color 0.3s;
+  }
+
+  .footer-links a:hover {
+    color: var(--secondary);
+  }
+
+  .footer-contact {
+    font-style: normal;
+    color: #94a3b8;
+  }
+
+  .footer-contact p {
+    margin-bottom: 0.8rem;
+  }
+
+  .footer-contact a {
+    color: var(--secondary);
+  }
+
+  .footer-bottom {
+    background: #0b1120;
+    padding: 1.5rem 0;
+    border-top: 1px solid rgba(255,255,255,0.1);
+  }
+
+  .footer-bottom-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    font-size: 0.9rem;
+    color: #64748b;
+  }
+
+  .footer-legal {
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  .footer-legal a {
+    color: #64748b;
+  }
+
+  .footer-legal a:hover {
+    color: white;
+  }
+</style>

@@ -1,0 +1,152 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout 
+	title="Nos Services de Plomberie et Chauffage | LYNECARES" 
+	description="Découvrez tous les services de LYNECARES à Liège : Dépannage urgent, installation sanitaire, entretien chaudière et recherche de fuites."
+>
+	<div class="page-header">
+		<div class="container text-center">
+			<h1>Nos Services</h1>
+			<p class="page-subtitle">Des solutions professionnelles pour tous vos besoins en plomberie et chauffage</p>
+		</div>
+	</div>
+
+	<div class="container py-5">
+		<!-- Service 1 -->
+		<section id="depannage" class="service-block">
+			<div class="service-content">
+				<h2>Dépannage Plomberie Urgent</h2>
+				<p>Nous comprenons qu'une urgence en plomberie peut causer des dégâts importants et beaucoup de stress. C'est pourquoi notre équipe est disponible 24/7 pour intervenir rapidement à Liège et ses environs.</p>
+				<ul class="service-list">
+					<li>Recherche et réparation de fuites d'eau</li>
+					<li>Débouchage de canalisations, éviers et WC</li>
+					<li>Réparation de chasses d'eau</li>
+					<li>Remplacement de robinetterie défectueuse</li>
+				</ul>
+				<a href="tel:+3240000000" class="btn btn-accent mt-1">Intervention Urgente</a>
+			</div>
+			<div class="service-image" style="background-image: url('https://images.unsplash.com/photo-1607472586893-edb57cb5b28b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')"></div>
+		</section>
+
+		<!-- Service 2 -->
+		<section id="chauffage" class="service-block reverse">
+			<div class="service-content">
+				<h2>Chauffage & Chaudière</h2>
+				<p>Un système de chauffage performant est essentiel pour votre confort en hiver. Nous prenons en charge l'installation, l'entretien et la réparation de vos systèmes de chauffage.</p>
+				<ul class="service-list">
+					<li>Entretien annuel obligatoire de chaudière (gaz/mazout)</li>
+					<li>Dépannage de chaudière toutes marques</li>
+					<li>Installation de nouveaux systèmes de chauffage</li>
+					<li>Purge et détartrage de radiateurs</li>
+				</ul>
+				<a href="/contact" class="btn btn-primary mt-1">Demander un Devis</a>
+			</div>
+			<div class="service-image" style="background-image: url('https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')"></div>
+		</section>
+
+		<!-- Service 3 -->
+		<section id="installation" class="service-block">
+			<div class="service-content">
+				<h2>Installations Sanitaires</h2>
+				<p>Vous souhaitez rénover votre salle de bain ou installer de nouveaux équipements sanitaires ? LYNECARES vous accompagne de la conception à la réalisation de votre projet.</p>
+				<ul class="service-list">
+					<li>Installation de douches à l'italienne et baignoires</li>
+					<li>Pose de WC suspendus ou classiques</li>
+					<li>Installation de chauffe-eau et boilers</li>
+					<li>Raccordement aux réseaux d'eau et d'évacuation</li>
+				</ul>
+				<a href="/contact" class="btn btn-primary mt-1">Parler de mon projet</a>
+			</div>
+			<div class="service-image" style="background-image: url('https://images.unsplash.com/photo-1620626011761-996317b8d101?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')"></div>
+		</section>
+	</div>
+</Layout>
+
+<style>
+	.page-header {
+		background: var(--primary);
+		color: white;
+		padding: 6rem 0 4rem;
+		margin-bottom: 4rem;
+	}
+
+	.page-header h1 {
+		color: white;
+		margin-bottom: 1rem;
+	}
+
+	.page-subtitle {
+		color: #94a3b8;
+		font-size: 1.2rem;
+		max-width: 600px;
+		margin: 0 auto;
+	}
+
+	.py-5 {
+		padding-top: 3rem;
+		padding-bottom: 5rem;
+	}
+
+	.service-block {
+		display: flex;
+		align-items: center;
+		gap: 4rem;
+		margin-bottom: 6rem;
+	}
+
+	.service-block.reverse {
+		flex-direction: row-reverse;
+	}
+
+	.service-content {
+		flex: 1;
+	}
+
+	.service-content h2 {
+		margin-bottom: 1.5rem;
+		color: var(--primary);
+	}
+
+	.service-list {
+		list-style: none;
+		margin-bottom: 2rem;
+	}
+
+	.service-list li {
+		position: relative;
+		padding-left: 2rem;
+		margin-bottom: 0.8rem;
+		color: var(--text);
+	}
+
+	.service-list li::before {
+		content: '✓';
+		position: absolute;
+		left: 0;
+		color: var(--secondary);
+		font-weight: bold;
+	}
+
+	.service-image {
+		flex: 1;
+		aspect-ratio: 4/3;
+		border-radius: 20px;
+		background-size: cover;
+		background-position: center;
+		box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+	}
+
+	.mt-1 { margin-top: 1rem; }
+
+	@media (max-width: 992px) {
+		.service-block, .service-block.reverse {
+			flex-direction: column;
+			gap: 2rem;
+		}
+		.service-image {
+			width: 100%;
+		}
+	}
+</style>

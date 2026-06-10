@@ -1,0 +1,105 @@
+---
+const links = [
+  { text: 'Accueil', href: '/' },
+  { text: 'Services', href: '/services' },
+  { text: 'Zones d\'intervention', href: '/locations' },
+  { text: 'À propos', href: '/about' },
+  { text: 'Contact', href: '/contact' },
+];
+---
+
+<header class="header">
+  <div class="container header-container">
+    <a href="/" class="logo">
+      <span class="logo-icon">💧</span>
+      LYNE<span class="logo-accent">CARES</span>
+    </a>
+
+    <nav class="nav">
+      <ul class="nav-list">
+        {links.map(link => (
+          <li>
+            <a href={link.href} class="nav-link">{link.text}</a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+
+    <div class="header-cta">
+      <a href="tel:+3240000000" class="btn btn-accent">Urgence 24/7</a>
+    </div>
+
+    <!-- Mobile menu button -->
+    <button class="mobile-menu-btn" aria-label="Menu">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+    </button>
+  </div>
+</header>
+
+<style>
+  .header {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+  }
+
+  .header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+  }
+
+  .logo {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .logo-accent {
+    color: var(--secondary);
+  }
+
+  .nav-list {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+  }
+
+  .nav-link {
+    font-weight: 500;
+    color: var(--text);
+  }
+
+  .nav-link:hover {
+    color: var(--secondary);
+  }
+
+  .mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--primary);
+  }
+
+  @media (max-width: 768px) {
+    .nav, .header-cta {
+      display: none;
+    }
+    .mobile-menu-btn {
+      display: block;
+    }
+  }
+</style>

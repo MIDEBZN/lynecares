@@ -1,0 +1,409 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
+// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+---
+
+<Layout 
+	title="Plombier Chauffagiste à Liège | Dépannage Urgent 24/7" 
+	description="LYNECARES est votre expert plombier à Liège. Dépannage urgence, installation sanitaire et entretien chauffage. Intervention rapide 24h/24 et 7j/7."
+>
+	<!-- Hero Section -->
+	<section class="hero animate-fade-in">
+		<div class="hero-bg">
+			<div class="overlay"></div>
+		</div>
+		<div class="container hero-container">
+			<div class="hero-content">
+				<span class="badge">Disponible 24/7 à Liège et environs</span>
+				<h1>Intervention Rapide de <span class="highlight">Plomberie</span> à Liège</h1>
+				<p class="hero-subtitle">Fuite d'eau ? Problème de chaudière ? Canalisation bouchée ? Nos experts interviennent en urgence pour résoudre tous vos problèmes de plomberie et de chauffage.</p>
+				<div class="hero-actions">
+					<a href="tel:+3240000000" class="btn btn-accent btn-large">
+						<span class="icon">📞</span> Appeler le 04 000 00 00
+					</a>
+					<a href="/contact" class="btn btn-primary btn-large">Demander un Devis</a>
+				</div>
+				<div class="trust-indicators">
+					<div class="trust-item">⭐ 4.9/5 sur Google</div>
+					<div class="trust-item">⚡ Intervention en 30 min</div>
+					<div class="trust-item">💶 Tarifs Transparents</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Services Section -->
+	<section class="section bg-light">
+		<div class="container">
+			<div class="section-header text-center mb-4">
+				<h2>Nos Services de Plomberie</h2>
+				<p>Une expertise complète pour votre habitation ou votre entreprise</p>
+			</div>
+			<div class="grid">
+				<div class="card">
+					<div class="card-icon">💧</div>
+					<h3>Dépannage Plomberie</h3>
+					<p>Recherche et réparation de fuites d'eau, débouchage d'éviers, toilettes et canalisations. Intervention rapide.</p>
+					<a href="/services#depannage" class="link-arrow">En savoir plus →</a>
+				</div>
+				<div class="card">
+					<div class="card-icon">🔥</div>
+					<h3>Chauffage</h3>
+					<p>Entretien, réparation et remplacement de chaudières toutes marques. Détartrage et purge de radiateurs.</p>
+					<a href="/services#chauffage" class="link-arrow">En savoir plus →</a>
+				</div>
+				<div class="card">
+					<div class="card-icon">🚿</div>
+					<h3>Installations Sanitaires</h3>
+					<p>Rénovation de salle de bain, installation de douches à l'italienne, WC suspendus, adoucisseurs d'eau.</p>
+					<a href="/services#installation" class="link-arrow">En savoir plus →</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Why Choose Us -->
+	<section class="section">
+		<div class="container flex-row">
+			<div class="content-half">
+				<h2>Pourquoi choisir <span class="highlight-secondary">LYNECARES</span> ?</h2>
+				<p>Avec plus de 10 ans d'expérience dans la région de Liège, nous garantissons un service de qualité supérieure pour tous vos besoins en plomberie.</p>
+				
+				<ul class="feature-list">
+					<li>
+						<span class="check">✓</span>
+						<div>
+							<strong>Disponibilité 24h/24 et 7j/7</strong>
+							<p>Les urgences n'attendent pas, nous non plus. Nous sommes prêts à intervenir à tout moment.</p>
+						</div>
+					</li>
+					<li>
+						<span class="check">✓</span>
+						<div>
+							<strong>Devis Gratuit et Transparent</strong>
+							<p>Pas de mauvaises surprises. Nos prix sont fixés à l'avance avant toute intervention.</p>
+						</div>
+					</li>
+					<li>
+						<span class="check">✓</span>
+						<div>
+							<strong>Travail Garanti</strong>
+							<p>Nous utilisons des matériaux de première qualité et offrons une garantie sur nos interventions.</p>
+						</div>
+					</li>
+				</ul>
+				<a href="/about" class="btn btn-outline mt-2">Découvrir notre histoire</a>
+			</div>
+			<div class="image-half">
+				<div class="image-placeholder bg-gradient">
+					<div class="stat-box">
+						<span class="stat-num">1000+</span>
+						<span class="stat-text">Interventions Réussies</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- CTA Section -->
+	<section class="cta-section">
+		<div class="container text-center">
+			<h2>Besoin d'un plombier en urgence ?</h2>
+			<p class="cta-desc">Nos techniciens sont prêts à intervenir dans toute la région de Liège.</p>
+			<a href="tel:+3240000000" class="btn btn-accent btn-large cta-pulse">
+				Appeler Maintenent
+			</a>
+		</div>
+	</section>
+</Layout>
+
+<style>
+	/* Hero */
+	.hero {
+		position: relative;
+		min-height: 80vh;
+		display: flex;
+		align-items: center;
+		padding: 4rem 0;
+		overflow: hidden;
+	}
+
+	.hero-bg {
+		position: absolute;
+		inset: 0;
+		background: url('https://images.unsplash.com/photo-1585704032915-c3400ca199e7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+		z-index: -2;
+	}
+
+	.overlay {
+		position: absolute;
+		inset: 0;
+		background: linear-gradient(90deg, var(--primary) 0%, rgba(15, 23, 42, 0.8) 50%, rgba(15, 23, 42, 0.4) 100%);
+		z-index: -1;
+	}
+
+	.hero-content {
+		max-width: 800px;
+		color: white;
+	}
+
+	.badge {
+		display: inline-block;
+		padding: 0.5rem 1rem;
+		background: rgba(14, 165, 233, 0.2);
+		border: 1px solid rgba(14, 165, 233, 0.4);
+		border-radius: 50px;
+		color: #38bdf8;
+		font-weight: 600;
+		font-size: 0.9rem;
+		margin-bottom: 1.5rem;
+	}
+
+	.hero h1 {
+		color: white;
+		margin-bottom: 1.5rem;
+	}
+
+	.highlight {
+		color: var(--secondary);
+	}
+
+	.highlight-secondary {
+		color: var(--primary);
+	}
+
+	.hero-subtitle {
+		font-size: 1.2rem;
+		color: #e2e8f0;
+		margin-bottom: 2.5rem;
+		max-width: 600px;
+	}
+
+	.hero-actions {
+		display: flex;
+		gap: 1rem;
+		flex-wrap: wrap;
+		margin-bottom: 3rem;
+	}
+
+	.btn-large {
+		padding: 1rem 2rem;
+		font-size: 1.1rem;
+	}
+
+	.trust-indicators {
+		display: flex;
+		gap: 2rem;
+		flex-wrap: wrap;
+		border-top: 1px solid rgba(255,255,255,0.1);
+		padding-top: 1.5rem;
+	}
+
+	.trust-item {
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+		font-weight: 500;
+		color: #cbd5e1;
+	}
+
+	/* Common utilities */
+	.bg-light { background: var(--bg-alt); }
+	.mt-2 { margin-top: 2rem; }
+
+	/* Grid & Cards */
+	.grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 2rem;
+	}
+
+	.card {
+		background: white;
+		padding: 2.5rem;
+		border-radius: var(--radius);
+		box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+		transition: transform 0.3s ease, box-shadow 0.3s ease;
+		border: 1px solid rgba(0,0,0,0.02);
+	}
+
+	.card:hover {
+		transform: translateY(-5px);
+		box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+	}
+
+	.card-icon {
+		font-size: 3rem;
+		margin-bottom: 1.5rem;
+		background: var(--bg-alt);
+		width: 80px;
+		height: 80px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 20px;
+	}
+
+	.card h3 {
+		margin-bottom: 1rem;
+		font-size: 1.5rem;
+	}
+
+	.card p {
+		color: var(--text-light);
+		margin-bottom: 1.5rem;
+	}
+
+	.link-arrow {
+		color: var(--secondary);
+		font-weight: 600;
+		display: inline-flex;
+		align-items: center;
+	}
+
+	.link-arrow:hover {
+		color: var(--primary);
+	}
+
+	/* Flex Layout */
+	.flex-row {
+		display: flex;
+		align-items: center;
+		gap: 4rem;
+	}
+
+	.content-half, .image-half {
+		flex: 1;
+	}
+
+	.content-half h2 {
+		margin-bottom: 1.5rem;
+	}
+
+	.feature-list {
+		list-style: none;
+		margin-top: 2rem;
+	}
+
+	.feature-list li {
+		display: flex;
+		gap: 1rem;
+		margin-bottom: 1.5rem;
+	}
+
+	.check {
+		background: rgba(14, 165, 233, 0.1);
+		color: var(--secondary);
+		width: 24px;
+		height: 24px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 50%;
+		font-weight: bold;
+		flex-shrink: 0;
+		margin-top: 4px;
+	}
+
+	.feature-list strong {
+		color: var(--text-dark);
+		display: block;
+		margin-bottom: 0.3rem;
+		font-size: 1.1rem;
+	}
+
+	.feature-list p {
+		color: var(--text-light);
+		margin: 0;
+	}
+
+	.image-placeholder {
+		width: 100%;
+		aspect-ratio: 4/5;
+		border-radius: 24px;
+		position: relative;
+		overflow: hidden;
+		background: url('https://images.unsplash.com/photo-1542013936693-884638332954?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80') center/cover;
+		box-shadow: 0 20px 40px rgba(15, 23, 42, 0.2);
+	}
+
+	.stat-box {
+		position: absolute;
+		bottom: 2rem;
+		left: -2rem;
+		background: white;
+		padding: 1.5rem;
+		border-radius: 16px;
+		box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+		display: flex;
+		flex-direction: column;
+		border-left: 5px solid var(--accent);
+	}
+
+	.stat-num {
+		font-size: 2.5rem;
+		font-weight: 800;
+		color: var(--primary);
+		font-family: var(--font-heading);
+	}
+
+	.stat-text {
+		color: var(--text-light);
+		font-weight: 500;
+	}
+
+	/* CTA Section */
+	.cta-section {
+		background: var(--primary);
+		padding: 6rem 0;
+		position: relative;
+		overflow: hidden;
+	}
+
+	.cta-section::before {
+		content: '';
+		position: absolute;
+		top: -50%;
+		right: -10%;
+		width: 500px;
+		height: 500px;
+		background: radial-gradient(circle, rgba(14, 165, 233, 0.2) 0%, rgba(15, 23, 42, 0) 70%);
+		border-radius: 50%;
+	}
+
+	.cta-section h2 {
+		color: white;
+		margin-bottom: 1rem;
+	}
+
+	.cta-desc {
+		color: #94a3b8;
+		font-size: 1.2rem;
+		margin-bottom: 2.5rem;
+	}
+
+	.cta-pulse {
+		animation: pulse 2s infinite;
+	}
+
+	@keyframes pulse {
+		0% { box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.4); }
+		70% { box-shadow: 0 0 0 20px rgba(245, 158, 11, 0); }
+		100% { box-shadow: 0 0 0 0 rgba(245, 158, 11, 0); }
+	}
+
+	@media (max-width: 992px) {
+		.flex-row {
+			flex-direction: column;
+		}
+		.image-half {
+			width: 100%;
+			max-width: 500px;
+		}
+		.stat-box {
+			left: 2rem;
+		}
+	}
+</style>
